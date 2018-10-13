@@ -1,0 +1,18 @@
+{
+  "name": "businesh-line-bot-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@line/bot-sdk": "^6.3.0",
+    "businesh": "^1.0.1",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4"
+  }
+}
