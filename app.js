@@ -13,9 +13,12 @@ const config = {
 const app = express();
 const client = new line.Client(config);
 
+app.get('/', (req, res) => res.send('Hello World!'));
+
 app.post('/webhook', line.middleware(config), (req, res) => {
     const events = req.body.events;
     events.map(event => handle_event(event));
+    res.send('Success');
 });
 
 const handle_event = event => {
@@ -26,4 +29,4 @@ const handle_event = event => {
 };
 
 const port = process.env.PORT || 3000;
-app.listen(port);
+app.listen(port, () => console.log(`Node app is running at localhost: ${port}`));
