@@ -21,7 +21,7 @@ app.post('/webhook', line.middleware(config), (req, res) => {
 const handle_event = event => {
     if (event.type !== 'message' || event.message.type !== 'text') return;
     businesh.translate(event.message.text)
-        .then(after_text => client.replyMessage(event.replyToken, { type: 'text', text: after_text }));
+        .then(after_text => client.replyMessage(event.replyToken, { type: 'text', text: after_text }))
         .catch(err => console.log(err));
 };
 
