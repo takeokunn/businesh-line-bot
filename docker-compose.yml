@@ -4,4 +4,5 @@ services:
   app:
     build: .
     ports:
-      - "3000:3000"
+      - "13939:3000"
+    command: "npm start"
